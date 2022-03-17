@@ -1,20 +1,20 @@
 import React from 'react';
-import styles from './SvgTree.module.css'
+import './SvgTree.css';
 
 function SvgTree(props) {
   return (
-      <div className={styles.tree}>
-        <div className={styles.treeItem}>Root</div>
-        <div className={styles.treeSegment}>
+      <div className="tree">
+        <div className="treeItem">Root</div>
+        <div className="treeSegment">
           <LineIntersection/>
-          <div className={styles.treeItem}>item 1</div>
+          <div className="treeItem">item 1</div>
         </div>
-        <div className={styles.treeSegment}>
+        <div className="treeSegment">
           <LineDrop/>
         </div>
-        <div className={styles.treeSegment}>
+        <div className="treeSegment">
           <LineIntersection/>
-          <div className={styles.treeItem}>item 2</div>
+          <div className="treeItem">item 2</div>
         </div>
       </div>
   );
