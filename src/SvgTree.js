@@ -54,8 +54,9 @@ function Tree({children}) {
 function LineIntersection() {
   return (
       <svg width="40" height="40"  version="1.1" xmlns="http://www.w3.org/2000/svg" className="line-intersection">
-        <line x1="16" y1="0" x2="16" y2="40" />
+        <line x1="16" y1="0" x2="16" y2="32.5" />
         <line x1="16" y1="32" x2="36" y2="32"  />
+        <line x1="16" y1="32.5" x2="16" y2="40" className="line-intersection__bottom-line"/>
       </svg>
   );
 }

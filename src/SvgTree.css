@@ -39,3 +39,7 @@
 .treeItem:last-child>.line-drop {
   display: none;
 }
+
+.treeItem:last-child>.line-intersection>.line-intersection__bottom-line {
+  display: none;
+}
