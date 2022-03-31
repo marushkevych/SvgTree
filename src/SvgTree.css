@@ -28,6 +28,14 @@
   grid-area: line-drop;
 }
 
+.treeItem:first-child>.line-intersection {
+  display: none;
+}
+
+.treeItem>.tree>.treeItem:first-child>.line-intersection {
+  display: block;
+}
+
 .treeItem:last-child>.line-drop {
   display: none;
 }
