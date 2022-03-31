@@ -27,3 +27,7 @@
 .line-drop {
   grid-area: line-drop;
 }
+
+.treeItem:last-child>.line-drop {
+  display: none;
+}

@@ -3,24 +3,30 @@ import './SvgTree.css';
 
 function SvgTree(props) {
   return (
-      <div>
-        <div className="treeLabel">Root</div>
-        <Tree>
-          <TreeItem name="item 1">
-            <Tree>
-              <TreeItem name="item 1a">
-                <Tree>
-                  <TreeItem name="item 1aa"/>
-                  <TreeItem name="item 1ab"/>
-                </Tree>
-              </TreeItem>
-              <TreeItem name="item 1b"/>
-            </Tree>
-          </TreeItem>
-          <TreeItem name="item 2"/>
-          <TreeItem name="item 3"/>
-        </Tree>
-      </div>
+      <Tree>
+        <TreeItem name="Root">
+          <Tree>
+            <TreeItem name="item 1">
+              <Tree>
+                <TreeItem name="item 1a">
+                  <Tree>
+                    <TreeItem name="item 1aa"/>
+                    <TreeItem name="item 1ab"/>
+                  </Tree>
+                </TreeItem>
+                <TreeItem name="item 1b"/>
+              </Tree>
+            </TreeItem>
+            <TreeItem name="item 2"/>
+            <TreeItem name="item 3">
+              <Tree>
+                <TreeItem name="item 3a"/>
+                <TreeItem name="item 3b"/>
+              </Tree>
+            </TreeItem>
+          </Tree>
+        </TreeItem>
+      </Tree>
   );
 }
 
