@@ -5,21 +5,21 @@ function SvgTree(props) {
   return (
       <div>
         <div className="treeLabel">Root</div>
-        <div className="tree">
+        <Tree>
           <TreeItem name="item 1">
-            <div className="tree">
+            <Tree>
               <TreeItem name="item 1a">
-                <div className="tree">
+                <Tree>
                   <TreeItem name="item 1aa"/>
                   <TreeItem name="item 1ab"/>
-                </div>
+                </Tree>
               </TreeItem>
               <TreeItem name="item 1b"/>
-            </div>
+            </Tree>
           </TreeItem>
           <TreeItem name="item 2"/>
           <TreeItem name="item 3"/>
-        </div>
+        </Tree>
       </div>
   );
 }
@@ -34,6 +34,14 @@ function TreeItem({name, children}) {
         <LineDrop/>
         {children}
       </div>
+  );
+}
+
+function Tree({children}) {
+  return (
+    <div className="tree">
+      {children}
+    </div>
   );
 }
 
