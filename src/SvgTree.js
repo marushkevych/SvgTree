@@ -6,46 +6,36 @@ function SvgTree(props) {
       <div>
         <div className="treeLabel">Root</div>
         <div className="tree">
-          <div className="treeItem">
-            <LineIntersection/>
-            <div className="treeLabel">item 1</div>
-            <LineDrop/>
+          <TreeItem name="item 1">
             <div className="tree">
-              <div className="treeItem">
-                <LineIntersection/>
-                <div className="treeLabel">item 1a</div>
-                <LineDrop/>
+              <TreeItem name="item 1a">
                 <div className="tree">
-                  <div className="treeItem">
-                    <LineIntersection/>
-                    <div className="treeLabel">item 1aa</div>
-                    <LineDrop/>
-                  </div>
-                  <div className="treeItem">
-                    <LineIntersection/>
-                    <div className="treeLabel">item 1ab</div>
-                    <LineDrop/>
-                  </div>
+                  <TreeItem name="item 1aa"/>
+                  <TreeItem name="item 1ab"/>
                 </div>
-              </div>
-              <div className="treeItem">
-                <LineIntersection/>
-                <div className="treeLabel">item 1b</div>
-                <LineDrop/>
-              </div>
+              </TreeItem>
+              <TreeItem name="item 1b"/>
             </div>
-          </div>
-          <div className="treeItem">
-            <LineIntersection/>
-            <div className="treeLabel">item 2</div>
-            <LineDrop/>
-          </div>
+          </TreeItem>
+          <TreeItem name="item 2"/>
+          <TreeItem name="item 3"/>
         </div>
       </div>
   );
 }
 
 export default SvgTree;
+
+function TreeItem({name, children}) {
+  return (
+      <div className="treeItem">
+        <LineIntersection/>
+        <div className="treeLabel">{name}</div>
+        <LineDrop/>
+        {children}
+      </div>
+  );
+}
 
 function LineIntersection() {
   return (
