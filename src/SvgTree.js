@@ -20,14 +20,11 @@ function SvgTree(props) {
 
 export default SvgTree;
 
-
-// TODO - move LineIntersection and LineDrop to the right using SVG instead of padding/margin
-
 function LineIntersection() {
   return (
       <svg width="40" height="40"  version="1.1" xmlns="http://www.w3.org/2000/svg" className="line-intersection">
-        <line x1="1" y1="0" x2="1" y2="40" />
-        <line x1="1" y1="32" x2="41" y2="32"  />
+        <line x1="16" y1="0" x2="16" y2="40" />
+        <line x1="16" y1="32" x2="36" y2="32"  />
       </svg>
   );
 }
@@ -35,7 +32,7 @@ function LineIntersection() {
 function LineDrop() {
   return (
       <svg width="40" height="100" viewBox="0 0 40 1" preserveAspectRatio="none" className="line-drop">
-        <line x1="1" x2="1" y2="1"/>
+        <line x1="16" x2="16" y2="1"/>
       </svg>
   );
 }
